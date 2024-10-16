@@ -77,25 +77,25 @@ https://phabricator.wikimedia.org/T236137
 :root,
 .notheme {
     // Base Values
-    --mid-background: @wmui-color-base90;
-    --paper-background: @wmui-color-base100;
-    --sub-cell-background: @wmui-color-base100;
-    --primary-text-color: @wmui-color-base10;
-    --secondary-text-color: @wmui-color-base30;
-    --link-color: @wmui-color-accent50;
-    --border-color: @wmui-color-base70;
-    --card-background: @wmui-color-base100;
+    --mid-background: @background-color-neutral-subtle;
+    --paper-background: @background-color-base;
+    --sub-cell-background: @background-color-base;
+    --primary-text-color: @color-base;
+    --secondary-text-color: @color-placeholder;
+    --link-color: @color-progressive;
+    --border-color: @border-color-subtle;
+    --card-background: @background-color-base;
 
     // Customizations
-    --footer-title-text-color: @wmui-color-base0;
-    --footer-text-color: @wmui-color-base30;
-    --placeholder-background: @wmui-color-base80;
-    --placeholder-error-background: @wmui-color-base70;
-    --android-active-edit-link-background: @wmui-color-base80;
+    --footer-title-text-color: @color-emphasized;
+    --footer-text-color: @color-placeholder;
+    --placeholder-background: @background-color-interactive;
+    --placeholder-error-background: @background-color-disabled;
+    --android-active-edit-link-background: @background-color-interactive;
     --box-shadow-table: 0 1px 4px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.18);
-    --footer-heading-text-color: @wmui-color-base30;
-    --footer-license-text-color: @wmui-color-base30;
-    --footer-readmore-description-text-color: @wmui-color-base30;
+    --footer-heading-text-color: @color-placeholder;
+    --footer-license-text-color: @color-placeholder;
+    --footer-readmore-description-text-color: @color-placeholder;
     --edit-section-link-container-opacity: 0.54;
     --external-link-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M17 17H3V3h5V1H3a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-5h-2z' fill='%2336c'/%3E%3Cpath d='M11 1l3.29 3.29-5.73 5.73 1.42 1.42 5.73-5.73L19 9V1z' fill='%2336c'/%3E%3C/svg%3E");
     --rtl-external-link-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M3 12H1v5c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2h-5v2h5v14H3z' fill='%2336c'/%3E%3Cpath d='M1 9l3.3-3.3 5.7 5.7 1.4-1.4-5.7-5.7L9 1H1z' fill='%2336c'/%3E%3C/svg%3E");
@@ -121,7 +121,7 @@ https://phabricator.wikimedia.org/T236137
     --mid-background: @wmui-color-sepia-base90;
     --paper-background: @wmui-color-sepia-base100;
     --sub-cell-background: @wmui-color-sepia-base90;
-    --primary-text-color: @wmui-color-base10;
+    --primary-text-color: @color-base;
     --secondary-text-color: @wmui-color-sepia-gray40;
     --border-color: @wmui-color-sepia-gray80;
     --card-background: @wmui-color-sepia-base90;
@@ -144,24 +144,27 @@ https://phabricator.wikimedia.org/T236137
 }
 
 .pcs-theme-dark {
+    .cdx-mode-dark();
+    color-scheme: dark;
+
     // Base Values
-    --mid-background: @wmui-color-dark-base10;
+    --mid-background: @background-color-neutral;
     --paper-background: @wmui-color-dark-base20;
     --sub-cell-background: @wmui-color-dark-base20;
-    --primary-text-color: @wmui-color-base90;
+    --primary-text-color: @color-emphasized;
     --secondary-text-color: @wmui-color-base70;
-    --link-color: @wmui-color-accent70;
-    --border-color: @wmui-color-dark-base30;
-    --card-background: @wmui-color-dark-base10;
+    --link-color: @color-progressive;
+    --border-color: @border-color-subtle;
+    --card-background: @background-color-neutral;
 
     // Customizations
-    --footer-title-text-color: @wmui-color-base90;
+    --footer-title-text-color: @color-emphasized;
     --placeholder-background: @wmui-color-base30;
-    --placeholder-error-background: @wmui-color-base20;
-    --android-active-edit-link-background: @wmui-color-dark-base5;
+    --placeholder-error-background: @background-color-disabled;
+    --android-active-edit-link-background: @background-color-base;
     --box-shadow-collapse-table: none;
-    --collapse-table-background: @wmui-color-base10;
-    --footer-heading-text-color: @wmui-color-base90;
+    --collapse-table-background: @background-color-neutral-subtle;
+    --footer-heading-text-color: @color-emphasized;
     --caption-background: @wmui-color-dark-base30;
     --footer-license-text-color: @wmui-color-base50;
     --footer-readmore-description-text-color: @wmui-color-base50;
@@ -172,24 +175,27 @@ https://phabricator.wikimedia.org/T236137
 }
 
 .pcs-theme-black {
+    .cdx-mode-dark();
+    color-scheme: dark;
+
     // Base Values
-    --mid-background: @wmui-color-base10;
+    --mid-background: @background-color-neutral-subtle;
     --paper-background: @wmui-color-base0;
-    --sub-cell-background: @wmui-color-base10;
-    --primary-text-color: @wmui-color-base90;
+    --sub-cell-background: @background-color-neutral-subtle;
+    --primary-text-color: @color-emphasized;
     --secondary-text-color: @wmui-color-base70;
-    --link-color: @wmui-color-accent70;
-    --border-color: @wmui-color-dark-base30;
+    --link-color: @color-progressive;
+    --border-color: @border-color-subtle;
     --card-background: @wmui-color-base0;
 
     // Customizations
-    --footer-title-text-color: @wmui-color-base90;
+    --footer-title-text-color: @color-emphasized;
     --placeholder-background: @wmui-color-dark-base30;
-    --placeholder-error-background: @wmui-color-dark-base10;
-    --android-active-edit-link-background: @wmui-color-dark-base5;
+    --placeholder-error-background: @background-color-neutral;
+    --android-active-edit-link-background: @background-color-base;
     --box-shadow-table: none;
-    --collapse-table-background: @wmui-color-base10;
-    --footer-heading-text-color: @wmui-color-base90;
+    --collapse-table-background: @background-color-neutral-subtle;
+    --footer-heading-text-color: @color-emphasized;
     --caption-background: @wmui-color-dark-base20;
     --footer-license-text-color: @wmui-color-base50;
     --footer-readmore-description-text-color: @wmui-color-base50;
