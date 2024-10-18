@@ -7,7 +7,19 @@ const path = require('path');
 const util = require('util');
 const writeFile = util.promisify(fs.writeFile);
 
-const url = 'https://en.m.wikipedia.org/w/load.php?lang=en&modules=ext.cite.styles|ext.wikimediamessages.styles|ext.math.styles|ext.timeline.styles|mediawiki.hlist|mobile.init.styles|skins.minerva.base.styles&only=styles&skin=minerva';
+const modules = [
+	'ext.cite.styles',
+	'ext.cite.parsoid.styles',
+	'ext.wikimediamessages.styles',
+	'ext.math.styles',
+	'ext.timeline.styles',
+	'ext.pygments',
+	'mediawiki.hlist',
+	'mobile.init.styles',
+	'skins.minerva.base.styles'
+];
+
+const url = 'https://en.m.wikipedia.org/w/load.php?modules=' + modules.join('|') + '&only=styles&skin=minerva';
 
 fetch(url)
 	.then(res => res.text())
