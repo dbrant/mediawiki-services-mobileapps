@@ -61,19 +61,6 @@ li.gallerybox div.thumb {
   });
 }
 
-/* baseline div, span, ul, li */
-div,
-span,
-ul,
-ol,
-li {
-  .nonDefaultThemes({
-    background-color: inherit;
-    color: var(--primary-text-color);
-    border-color: var(--border-color);
-  });
-}
-
 /* quotebox and blockquote */
 /* en > Audioslave > 793042679 */
 /* es > Arte > 100819823 */
@@ -134,22 +121,9 @@ caption {
   background-color: var(--mid-background);
 }
 
-span.glossary-link-internal {
-  .darkThemesOnly({
-    color: var(--glossary-link-color) !important;
-  });
-}
-
 .pcs-collapse-table-container td {
   .darkThemesOnly({
     color: var(--collapse-table-text-color);
-    background: unset;
-  });
-}
-
-figcaption div span {
-  .darkThemesOnly({
-    color: var(--figcaption-text-color);
     background: unset;
   });
 }
