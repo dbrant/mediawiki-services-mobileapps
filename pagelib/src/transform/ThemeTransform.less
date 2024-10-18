@@ -14,10 +14,21 @@ be found here: https://phabricator.wikimedia.org/T236137
 
 /* baseline */
 
-.nonDefaultThemesUniversal({
-  color: var(--primary-text-color);
-  background: var(--paper-background);
-});
+body {
+  .nonDefaultThemesUniversal({
+    color: var(--primary-text-color);
+    background: var(--paper-background);
+  });
+}
+
+.pcs-platform-android {
+  .pcs-theme-dark {
+    background-color: @android-dark-theme-background;
+  }
+  .pcs-theme-black {
+    background-color: @android-black-theme-background;
+  }
+}
 
 .notheme {
   color: @color-emphasized;
@@ -25,13 +36,6 @@ be found here: https://phabricator.wikimedia.org/T236137
 
 a.notheme {
   color: @color-progressive;
-}
-
-/* baseline anchor */
-a {
-  .nonDefaultThemes({
-    color: var(--link-color);
-  });
 }
 
 /* External link -- LTR */
@@ -108,24 +112,6 @@ caption {
   });
 }
 
-/* images */
-/* compatibility transform */
-img.mwe-math-fallback-image-inline {
-  .darkThemesOnlyUniversal({
-    background: @background-color-interactive;
-    padding: 2px;
-  }, true);
-}
-
-/* en > Quadratic equation > 793685454 */
-img.mwe-math-fallback-image-display,
-img.mwe-math-fallback-image-inline {
-  .darkThemesOnly({
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
-  });
-}
-
 .pcs-element-highlight {
   background-color: rgba(@wmui-color-yellow50, 0.4) !important;
   color: @color-emphasized !important;
@@ -166,10 +152,6 @@ figcaption div span {
     color: var(--figcaption-text-color);
     background: unset;
   });
-}
-
-span.org {
-  color: #fff !important;
 }
 
 sup>a.reference-link {
