@@ -174,35 +174,19 @@ https://phabricator.wikimedia.org/T236137
     --figcaption-text-color: var(--primary-text-color);
 }
 
-.pcs-theme-black {
-    .cdx-mode-dark();
-    color-scheme: dark;
+.pcs-theme-black:extend(.pcs-theme-dark) {
 
     // Base Values
     --mid-background: @background-color-neutral-subtle;
     --paper-background: @wmui-color-base0;
     --sub-cell-background: @background-color-neutral-subtle;
-    --primary-text-color: @color-emphasized;
-    --secondary-text-color: @wmui-color-base70;
-    --link-color: @color-progressive;
-    --border-color: @border-color-subtle;
     --card-background: @wmui-color-base0;
 
     // Customizations
-    --footer-title-text-color: @color-emphasized;
     --placeholder-background: @wmui-color-dark-base30;
     --placeholder-error-background: @background-color-neutral;
-    --android-active-edit-link-background: @background-color-base;
     --box-shadow-table: none;
-    --collapse-table-background: @background-color-neutral-subtle;
-    --footer-heading-text-color: @color-emphasized;
     --caption-background: @wmui-color-dark-base20;
-    --footer-license-text-color: @wmui-color-base50;
-    --footer-readmore-description-text-color: @wmui-color-base50;
-    --edit-section-link-container-opacity: 0.7;
-    --glossary-link-color: var(--primary-text-color);
-    --collapse-table-text-color: var(--primary-text-color);
-    --figcaption-text-color: var(--primary-text-color);
 }
 
 // Sometimes all the dark themes have the same styling. To minimize CSS size,
