@@ -50,7 +50,16 @@ const setTheme = ( document, theme ) => {
 	const body = document.body;
 	setThemeOnElement( body, theme );
 
-	document.documentElement.classList.add( 'mw-hide-empty-elt' );
+	// TEMPORARY
+	document.documentElement.classList.add( 'pcs-platform-android' );
+
+	// Minerva applies these styles; research if there are others that should be applied.
+	body.classList.add( 'mw-hide-empty-elt' );
+	body.classList.add( 'skin--responsive' );
+
+	// Set the theme on the html element, too.
+	setThemeOnElement( document.documentElement, theme );
+
 	if ( theme === THEME.DARK || theme === THEME.BLACK ) {
 		document.documentElement.classList.add( 'skin-theme-clientpref-night' );
 	}
