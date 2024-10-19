@@ -49,6 +49,12 @@ const setThemeOnElement = ( el, theme ) => {
 const setTheme = ( document, theme ) => {
 	const body = document.body;
 	setThemeOnElement( body, theme );
+
+	document.documentElement.classList.add( 'mw-hide-empty-elt' );
+	if ( theme === THEME.DARK || theme === THEME.BLACK ) {
+		document.documentElement.classList.add( 'skin-theme-clientpref-night' );
+	}
+
 	// the pcs element is necessary to allow
 	// template editors to theme templates by
 	// declaring styles for .themeclass .templateclass {
