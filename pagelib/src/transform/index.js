@@ -25,7 +25,6 @@ import PlatformTransform from './PlatformTransform';
 import Polyfill from './Polyfill';
 import RedLinks from './RedLinks';
 import ReferenceCollection from './ReferenceCollection';
-import Throttle from './Throttle';
 import SectionUtilities from './SectionUtilities';
 import HTMLUtilities from './HTMLUtilities';
 import WidenImage from './WidenImage';
@@ -64,7 +63,6 @@ export default {
 	test: {
 		ElementGeometry,
 		ElementUtilities,
-		Polyfill,
-		Throttle
+		Polyfill
 	}
 };

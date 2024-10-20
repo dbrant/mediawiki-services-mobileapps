@@ -221,6 +221,19 @@ const addImageNoLazyLoadClass = (element: Element) : void => {
   });
 }
 
+const convertPlaceholdersToImages = (document: Document) : void => {
+  const placeholders = document.querySelectorAll(`.${ PLACEHOLDER_CLASS }`);
+  for ( let i = 0; i < placeholders.length; i++ ) {
+    const placeholder = placeholders[ i ];
+    const image = document.createElement('img');
+    
+    ElementUtilities.copyDataAttributesToAttributes(placeholder, image, COPY_ATTRIBUTES);
+    image.setAttribute('loading', 'lazy');
+    
+    if (placeholder.parentNode) placeholder.parentNode.replaceChild(image, placeholder);
+  }
+}
+
 export default {
   CLASSES,
   PLACEHOLDER_CLASS,
@@ -228,6 +241,7 @@ export default {
   queryLazyLoadableImages,
   convertImagesToPlaceholders,
   convertImageToPlaceholder,
+  convertPlaceholdersToImages,
   loadPlaceholder,
   addImageNoLazyLoadClass
 }
