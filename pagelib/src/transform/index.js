@@ -20,7 +20,6 @@ import FooterLegal from './FooterLegal';
 import FooterMenu from './FooterMenu';
 import FooterReadMore from './FooterReadMore';
 import LazyLoadTransform from './LazyLoadTransform';
-import LazyLoadTransformer from './LazyLoadTransformer';
 import PlatformTransform from './PlatformTransform';
 import Polyfill from './Polyfill';
 import RedLinks from './RedLinks';
@@ -51,7 +50,6 @@ export default {
 	FooterMenu,
 	FooterReadMore,
 	LazyLoadTransform,
-	LazyLoadTransformer,
 	PlatformTransform,
 	// todo: rename RedLinkTransform.
 	RedLinks,

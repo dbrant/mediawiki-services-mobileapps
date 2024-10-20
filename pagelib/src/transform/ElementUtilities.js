@@ -91,13 +91,18 @@ const copyAttributesToDataAttributes = ( source, destination, attributes ) => {
  *
  * @param {!HTMLElement} source
  * @param {!HTMLElement} destination
- * @param {!Array.<string>} attributes
  * @return {void}
  */
-const copyDataAttributesToAttributes = ( source, destination, attributes ) => {
-	attributes.filter( ( attribute ) => source.hasAttribute( `data-${ attribute }` ) )
-		.forEach( ( attribute ) =>
-			destination.setAttribute( attribute, source.getAttribute( `data-${ attribute }` ) ) );
+const copyDataAttributesToAttributes = ( source, destination ) => {
+	if (source && source.attributes) {
+		const attributes = source.attributes;
+		for ( let i = 0; i < attributes.length; i++ ) {
+			const attribute = attributes[ i ];
+			if ( attribute.name.startsWith( 'data-' ) ) {
+				destination.setAttribute( attribute.name.substring( 5 ), attribute.value );
+			}
+		}
+	}
 };
 
 export default {

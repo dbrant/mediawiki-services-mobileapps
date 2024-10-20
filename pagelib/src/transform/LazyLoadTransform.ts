@@ -227,7 +227,7 @@ const convertPlaceholdersToImages = (document: Document) : void => {
     const placeholder = placeholders[ i ];
     const image = document.createElement('img');
     
-    ElementUtilities.copyDataAttributesToAttributes(placeholder, image, COPY_ATTRIBUTES);
+    ElementUtilities.copyDataAttributesToAttributes(placeholder, image);
     image.setAttribute('loading', 'lazy');
     
     if (placeholder.parentNode) placeholder.parentNode.replaceChild(image, placeholder);
