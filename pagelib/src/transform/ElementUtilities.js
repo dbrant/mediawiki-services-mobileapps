@@ -77,12 +77,10 @@ const isVisible = ( element ) =>
  *
  * @param {!HTMLElement} source
  * @param {!HTMLElement} destination
- * @param {!Array.<string>} attributes
  * @return {void}
  */
-const copyAttributesToDataAttributes = ( source, destination, attributes ) => {
-	attributes.filter( ( attribute ) => source.hasAttribute( attribute ) )
-		.forEach( ( attribute ) =>
+const copyAttributesToDataAttributes = ( source, destination ) => {
+	source.attributes.forEach( ( attribute ) =>
 			destination.setAttribute( `data-${ attribute }`, source.getAttribute( attribute ) ) );
 };
 
